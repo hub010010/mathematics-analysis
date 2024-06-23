@@ -1,0 +1,119 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{第14章
+数项级数}\label{ux7b2c14ux7ae0--ux6570ux9879ux7ea7ux6570}
+
+\subsection{14.1
+无穷级数的基本性质}\label{141-ux65e0ux7a77ux7ea7ux6570ux7684ux57faux672cux6027ux8d28}
+
+\tableofcontents
+
+\subsubsection{14.1.1
+无穷级数的定义}\label{1411-ux65e0ux7a77ux7ea7ux6570ux7684ux5b9aux4e49}
+
+\[无穷级数:\sum_{n=1}^{\infty}a_n = a_1 +a_2 +\cdots+a_n+\cdots\\
+部分和: S_n=\sum_{k=1}^{n}a_k\\
+级数收敛: \lim_{n\to\infty}S_n=S存在\\ 
+否则，级数发散\]
+
+\subsubsection{14.1.2
+收敛的必要条件}\label{1412-ux6536ux655bux7684ux5fc5ux8981ux6761ux4ef6}
+
+\[\lim_{n\to\infty}a_n=0\]
+
+\subsubsection{14.1.3
+收敛级数的可加/可数乘性}\label{1413-ux6536ux655bux7ea7ux6570ux7684ux53efux52a0ux53efux6570ux4e58ux6027}
+
+\begin{itemize}
+\item
+  !!! 前提 !!! : 两级数都收敛
+
+  \[\sum_{k=1}^{\infty}a_k,\sum_{k=1}^{\infty}b_k 收敛\\
+    则 \sum_{k=1}^{\infty}(\alpha a_k+\beta b_k)=\alpha\sum_{k=1}^{\infty}a_k+\beta\sum_{k=1}^{\infty}b_k\]
+\end{itemize}
+
+\subsubsection{14.1.4
+收敛级数的可结合性}\label{1414-ux6536ux655bux7ea7ux6570ux7684ux53efux7ed3ux5408ux6027}
+
+\begin{itemize}
+\item
+  把 \textbf{收敛级数} 任意 \textbf{结合}
+\item
+  而 \textbf{不改变} 其 \textbf{先后次序}
+\item
+  与 \textbf{新级数} 和相同
+
+  \[\sum_{n=1}^{\infty}a_n = (a_1+a_2+\cdots +a_{k_1})+(a_{k_1+1}+\cdots+a_{k_2})+\cdots+(a_{k_{n-1}+1}+\cdots+a_{k_n})+\cdots\\
+  新级数: b_n=a_{k_{n-1}+1}+\cdots+a_{k_n}\\
+  \sum_{n=1}^{\infty}a_n =\sum_{n=1}^{\infty}b_n\]
+\item
+  正向：已知 \(\sum_{n=1}^{\infty}a_n\) 收敛，得
+  \(\sum_{n=1}^{\infty}b_n\) 收敛
+\item
+  逆向：已知 \(\sum_{n=1}^{\infty}b_n\) 收敛，且 括号中的项都同号，得
+  \(\sum_{n=1}^{\infty}a_n\) 收敛
+\end{itemize}
+
+\subsubsection{14.1.5
+增加或去掉有限项}\label{1415-ux589eux52a0ux6216ux53bbux6389ux6709ux9650ux9879}
+
+\begin{quote}
+\(\sum_{n=1}^{\infty}a_n\) 前 增加或去掉有限项，不影响级数的敛散性
+\end{quote}
+
+\end{document}
